@@ -69,7 +69,7 @@ dockers:
   - image_templates:
       - thorax/{{ .ProjectName }}:{{ .Version }}-amd64
       - ghcr.io/ledgerwatch/{{ .ProjectName }}:{{ .Version }}-amd64
-    dockerfile: Dockerfile.release
+    dockerfile: Dockerfile
     use: buildx
     skip_push: true
     goarch: amd64
@@ -81,7 +81,7 @@ dockers:
   - image_templates:
       - thorax/{{ .ProjectName }}:{{ .Version }}-arm64
       - ghcr.io/ledgerwatch/{{ .ProjectName }}:{{ .Version }}-arm64
-    dockerfile: Dockerfile.release
+    dockerfile: Dockerfile
     skip_push: true
     use: buildx
     goarch: arm64
